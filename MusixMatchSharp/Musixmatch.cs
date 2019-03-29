@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
-using System.Web;
 
 namespace MusixMatchSharp
 {
@@ -37,9 +36,9 @@ namespace MusixMatchSharp
             int i = Convert.ToInt32(page_size_int);
 
             if (i > 100)
-                  i = 100;
+                i = 100;
             else if (i < 1)
-                  i = 1;
+                i = 1;
 
             return i.ToString();
         }
@@ -454,7 +453,7 @@ namespace MusixMatchSharp
         /// <returns></returns>
         public string Genres_get(string _format = "json")
         {
-            var data = _request(_get_url(string.Format("music.genres.get?format={0}",_format)));
+            var data = _request(_get_url(string.Format("music.genres.get?format={0}", _format)));
             return data;
         }
     }
